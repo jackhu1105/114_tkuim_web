@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於我</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>個人自我介紹</h1>
+    
+    <div class="section">
+      <h2>基本資料</h2>
+      <p>姓名：<strong>胡柏睿</strong></p>
+      <p>科系：資訊管理學系</p>
+      <p>年級：大三</p>
+    </div>
+    
+    <div class="section">
+      <h2>興趣愛好</h2>
+      <ul>
+        <li>程式設計</li>
+        <li>打球</li>
+        <li>騎車</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>學習經歷</h2>
+      <table>
+        <tr>
+          <th>時間</th>
+          <th>課程</th>
+        </tr>
+        <tr>
+          <td>2023</td>
+          <td>HTML 基礎</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td>網頁程式設計</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="section">
+      <h2>聯絡方式</h2>
+      <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/example" target="_blank">我的 GitHub</a></p>
+    </div>
+    
+    <div class="section">
+      <h2>個人照片</h2>
+      <img src="https://via.placeholder.com/300" alt="個人照片" class="profile-img">
+    </div>
+  </div>
+</body>
+</html>
+
+/* 全域樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "微軟正黑體", "Segoe UI", Arial, sans-serif;
+  /* 我修改了背景漸層顏色：從藍紫色(#667eea→#764ba2) 改成粉紅橙(#ff9a9e→#fad0c4) */
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  padding: 20px;
+  line-height: 1.8;
+}
+
+/* 容器樣式 */
+.container {
+  max-width: 850px; /* 我修改了寬度：由 800px → 850px，使版面更寬鬆 */
+  margin: 0 auto;
+  background-color: #fffafc; /* 我修改了背景：由 white → 淡粉色 */
+  padding: 45px; /* 我增加了內距：40px → 45px */
+  border-radius: 20px; /* 我修改了圓角：由 15px → 20px */
+  /* 我修改了陰影顏色：由黑灰改為柔和粉棕 */
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+}
+
+/* 主標題 */
+h1 {
+  color: #ff7eb3; /* 我修改了主標題顏色：由 #667eea 改為 #ff7eb3 */
+  text-align: center;
+  font-size: 2.8em; /* 我調大字體：2.5em → 2.8em */
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #ff7eb3; /* 同步修改底線顏色 */
+}
+
+/* 區段樣式 */
+.section {
+  margin: 30px 0;
+  padding: 25px; /* 我加大內距：20px → 25px */
+  background-color: #fff0f5; /* 我修改背景：由灰白 → 淡粉色 */
+  border-radius: 12px; /* 我修改圓角：由 10px → 12px */
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  /* 我修改了懸浮陰影顏色：由黑灰改成粉紅半透明 */
+  box-shadow: 0 5px 20px rgba(255, 192, 203, 0.4);
+}
+
+/* 副標題 */
+h2 {
+  color: #ff6f91; /* 我修改副標題顏色：由 #764ba2 → #ff6f91 */
+  font-size: 1.9em; /* 稍微放大：1.8em → 1.9em */
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-left: 5px solid #ff6f91; /* 同步改成粉色邊條 */
+}
+
+/* 段落 */
+p {
+  color: #444; /* 我修改字色：由 #555 → #444，提升對比 */
+  margin: 10px 0;
+  padding-left: 15px;
+}
+
+strong {
+  color: #ff6f91; /* 我修改重點文字顏色：與副標題一致 */
+  font-size: 1.15em; /* 略增強重點字體大小 */
+}
+
+/* 列表樣式 */
+ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+li {
+  color: #444; /* 調整字色一致 */
+  margin: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+li::before {
+  content: "🌸"; /* 我修改列表符號：由 ✓ 改為花朵符號 */
+  position: absolute;
+  left: 0;
+  color: #ff6f91; /* 同步調整顏色 */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* 表格樣式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background-color: white;
+  border-radius: 8px; /* 我修改圓角：由 5px → 8px */
+  overflow: hidden;
+}
+
+th {
+  background-color: #ff7eb3; /* 我修改表頭背景：由 #667eea → #ff7eb3 */
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f5c6d6; /* 我修改底線顏色：更柔和的粉色 */
+  color: #555;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #ffe4ec; /* 我修改懸浮列背景：由 #f0f0ff → 淡粉色 */
+}
+
+/* 超連結樣式 */
+a {
+  color: #ff6f91; /* 我修改連結主色：由 #667eea → #ff6f91 */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: #ff9a9e; /* 我修改懸浮色：由 #764ba2 → #ff9a9e */
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ff9a9e; /* 同步修改底線顏色 */
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* 圖片樣式 */
+.profile-img {
+  width: 320px; /* 我放大圖片尺寸：由 300 → 320px */
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+  border: 6px solid #ff6f91; /* 我修改邊框顏色與厚度 */
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.5); /* 修改陰影顏色與強度 */
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.08); /* 我放大懸浮效果：由 1.05 → 1.08 */
+}
